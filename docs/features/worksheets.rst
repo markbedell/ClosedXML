@@ -12,21 +12,21 @@ For name, a new name `Sheet{number}` will be used. If a position is missing, she
 
 .. code-block:: csharp
 
-   // Add a 'Sheet1' as the last worksheet, in the case of a new workbook as a first sheet
+   // Add a 'Sheet1' as the last worksheet, in the case of a new workbook it will be the first sheet
    wb.AddWorksheet();
 
    // Add a worksheet with a name 'Export' as the last sheet of a workbook
    wb.AddWorksheet("Export");
 
-   // Add a worksheet Export at position 2, moving all other sheets to the right
+   // Add a worksheet 'Import' at position 2, moving all other sheets to the right
    // 'Export' will be in the last position, the end result will be 'Sheet1', 'Import', 'Export'
    wb.AddWorksheet("Import", 2);
 
-Methods `XLWorkbook.Worksheets.Add` are behaving the same way.
+Methods `XLWorkbook.Worksheets.Add` behave the same way.
 
 Removing a worksheet
 --------------------
-Worksheet can be removed using a position or a sheet name.
+A Worksheet can be removed using a position or a sheet name.
 
 .. code-block:: csharp
 
@@ -36,7 +36,7 @@ Worksheet can be removed using a position or a sheet name.
 
 Moving worksheets
 -----------------
-It is also possible to rearrange the order of the worksheets in the workbook. The worksheets will move from original position and will be in a new position, moving other sheets accordingly.
+It is also possible to rearrange the order of the worksheets in the workbook. The worksheets will move from their original position to a new position, moving other sheets accordingly.
 
 .. code-block:: csharp
 
